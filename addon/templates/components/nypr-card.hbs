@@ -1,11 +1,11 @@
 <div class="nypr-card-header">
   <span class="nypr-card-title">{{title}}</span>
-  
+
   {{#if edit}}
   <button class="nypr-card-edit-btn" {{action (action edit)}} data-test-selector="edit-button">
-    Edit info
+    {{if editLabel editLabel 'Edit Info'}}
   </button>
   {{/if}}
-</div> 
+</div>
 
 {{yield}}
