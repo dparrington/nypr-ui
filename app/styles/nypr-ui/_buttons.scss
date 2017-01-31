@@ -57,7 +57,7 @@
   color: initial;
   text-align: left;
   background-color: transparent;
-  
+
   @include transition(
     opacity $transition-timing,
     background-color $transition-timing,
@@ -116,6 +116,30 @@
       outline: none;
       background-color: $darkblue;
       border-color: $darkblue;
+      color: white;
+      opacity: 1;
+    }
+  }
+}
+
+/**
+ * Red Button:
+ * `.btn--red`
+ *
+ *      @example
+ *      button.btn.btn--red Click
+ */
+@mixin btn--red {
+  background-color: $red;
+  border-color: $red;
+  color: white;
+
+  &:not([disabled]) {
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: darken($red, 10%);
+      border-color: darken($red, 10%);
       color: white;
       opacity: 1;
     }
